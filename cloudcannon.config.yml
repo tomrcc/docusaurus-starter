@@ -11,29 +11,32 @@ markdown:
 collections_config:
   pages:
     path: src/pages
+    url: "/[full_slug]/"
     name: Pages
     glob: 
-      - "*.md"
-      - "*.mdx"
+      - "**/*.md"
+      - "**/*.mdx"
     icon: text_ad
   blog:
     path: blog
     url: "/blog/[full_slug]/"
     name: Blog
     glob: 
-      - "*.md"
+      - "**/*.md"
     icon: event_available
   blog_data:
     path: blog
     disable_url: true 
-    name: Blog
+    name: Blog Data
     glob: 
       - "*.yml"
     icon: event_available
   docs:
     path: docs
     url: "/docs/[full_slug]/"
+    disable_add_folder: true
     name: Docs
     glob: 
-      - "*.md"
+      - "**/*.md"
+      - "**/*.mdx"
     icon: docs
