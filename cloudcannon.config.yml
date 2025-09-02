@@ -1,0 +1,20 @@
+collections_config:
+  blog:
+    path: blog
+    name: Blog
+    icon: event_available
+  docs:
+    path: docs
+    name: Docs
+    icon: docs
+  src_pages:
+    path: src/pages
+    name: Src Pages
+    icon: fit_page
+paths:
+  static: ''
+  uploads: uploads
+timezone: Asia/Bangkok
+markdown:
+  engine: commonmark
+  options: {}
