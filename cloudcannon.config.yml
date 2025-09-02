@@ -46,7 +46,7 @@ collections_config:
         path: .cloudcannon/schemas/docs.md
         create: 
           path: "[relative_base_path]/{filename|slugify}.md"
-      new_docs_section:
+      docs_section_data:
         path: .cloudcannon/schemas/_category_.json
         create: 
           path: "[relative_base_path]/{section_name|slugify}/_category_.json"
