@@ -1,20 +1,39 @@
-collections_config:
-  blog:
-    path: blog
-    name: Blog
-    icon: event_available
-  docs:
-    path: docs
-    name: Docs
-    icon: docs
-  src_pages:
-    path: src/pages
-    name: Src Pages
-    icon: fit_page
-paths:
-  static: ''
-  uploads: uploads
 timezone: Asia/Bangkok
+
+paths:
+  static: static
+  uploads: static/img
+
 markdown:
   engine: commonmark
   options: {}
+
+collections_config:
+  pages:
+    path: src/pages
+    name: Pages
+    glob: 
+      - "*.md"
+      - "*.mdx"
+    icon: text_ad
+  blog:
+    path: blog
+    url: "/blog/[full_slug]/"
+    name: Blog
+    glob: 
+      - "*.md"
+    icon: event_available
+  blog_data:
+    path: blog
+    disable_url: true 
+    name: Blog
+    glob: 
+      - "*.yml"
+    icon: event_available
+  docs:
+    path: docs
+    url: "/docs/[full_slug]/"
+    name: Docs
+    glob: 
+      - "*.md"
+    icon: docs
