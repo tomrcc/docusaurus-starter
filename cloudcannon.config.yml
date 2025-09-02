@@ -49,4 +49,4 @@ collections_config:
       docs_section_data:
         path: .cloudcannon/schemas/_category_.json
         create: 
-          path: "[relative_base_path]/{section_name|slugify}/_category_.json"
+          path: "{section_name|slugify}/_category_.json"
