@@ -1,0 +1,72 @@
+[
+  {
+    "type": "doc",
+    "id": "intro",
+    "label": "Getting started"
+  },
+  {
+    "label": "Tutorial - Basics",
+    "type": "category",
+    "collapsible": true,
+    "collapsed": true,
+    "link": {
+      "type": "generated-index",
+      "title": "Docusaurus Guides",
+      "description": "Learn about the most important Docusaurus concepts!",
+      "slug": "/category/docusaurus-guides",
+      "keywords": ["guides"],
+      "image": "/img/docusaurus.png"
+    },
+    "items": [
+      {
+        "label": "Congratulations",
+        "type": "doc",
+        "id": "tutorial-basics/congratulations"
+      },
+      {
+        "label": "Create a blog post",
+        "type": "doc",
+        "id": "tutorial-basics/create-a-blog-post"
+      },
+      {
+        "label": "Create a document",
+        "type": "doc",
+        "id": "tutorial-basics/create-a-document"
+      },
+      {
+        "label": "Create a page",
+        "type": "doc",
+        "id": "tutorial-basics/create-a-page"
+      },
+      {
+        "label": "Deploy your site",
+        "type": "doc",
+        "id": "tutorial-basics/deploy-your-site"
+      },
+      {
+        "type": "link",
+        "label": "Facebook",
+        "href": "https://facebook.com"
+      }
+    ]
+  },
+  {
+    "label": "Tutorial - Extras",
+    "type": "category",
+    "collapsible": true,
+    "collapsed": true,
+    "link": {},
+    "items": [
+      {
+        "label": "Manage docs versions",
+        "type": "doc",
+        "id": "tutorial-extras/manage-docs-versions"
+      },
+      {
+        "label": "Translate your site",
+        "type": "doc",
+        "id": "tutorial-extras/translate-your-site"
+      }
+    ]
+  }
+]
