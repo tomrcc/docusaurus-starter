@@ -25,6 +25,5 @@ const sidebars = {
 };
 
 // https://docusaurus.io/docs/sidebar/items
-console.log(sidebarData);
 
 export default sidebars;

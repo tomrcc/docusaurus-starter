@@ -23,14 +23,8 @@ collections_config:
     name: Blog
     glob: 
       - "**/*.md"
+      - "**/*.mdx"
     icon: event_available
-  blog_data:
-    path: blog
-    disable_url: true 
-    name: Blog Data
-    glob: 
-      - "*.yml"
-    icon: settings
   docs:
     path: docs
     url: "/docs/[full_slug]/"
@@ -39,14 +33,9 @@ collections_config:
     glob: 
       - "**/*.md"
       - "**/*.mdx"
-      - "**/_category_.json"
     icon: docs
-    schemas:
-      default:
-        path: .cloudcannon/schemas/docs.md
-        create: 
-          path: "[relative_base_path]/{filename|slugify}.md"
-      docs_section_data:
-        path: .cloudcannon/schemas/_category_.json
-        create: 
-          path: "{section_name|slugify}/_category_.json"
+  data:
+    path: data
+    disable_url: true
+    disable_add_folder: true
+    icon: settings
