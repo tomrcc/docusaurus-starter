@@ -44,6 +44,11 @@
         "id": "tutorial-basics/deploy-your-site"
       },
       {
+        "label": "Markdown features",
+        "type": "doc",
+        "id": "tutorial-basics/markdown-features"
+      },
+      {
         "type": "link",
         "label": "Facebook",
         "href": "https://facebook.com"
