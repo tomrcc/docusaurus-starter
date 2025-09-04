@@ -68,6 +68,17 @@ data_config:
   tags:
     path: data/tags.yml
 
+_inputs:
+  slug:
+    type: text
+    comment: The page slug used for the url.
+  draft:
+    type: switch
+    comment: Draft pages will only be available during development.
+  unlisted:
+    type: switch
+    comment: Unlisted pages will be available in both development and production. They will be "hidden" in production, not indexed, excluded from sitemaps, and can only be accessed by users having a direct link.
+
 _editables:
   content:
     blockquote: true
