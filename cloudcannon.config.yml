@@ -34,6 +34,9 @@ collections_config:
         options:
           values: data.authors
           value_key: id
+          preview:
+            text:
+              - key: name
       tags:
         type: multiselect
         options:
@@ -42,7 +45,6 @@ collections_config:
   docs:
     path: docs
     url: "/docs/[full_slug]/"
-    disable_add_folder: true
     name: Docs
     glob: 
       - "**/*.md"
@@ -86,3 +88,7 @@ _editables:
     image: true
     table: true
     snippet: true
+
+_snippets_imports:
+  mdx: true
+  docusaurus_mdx: true  
