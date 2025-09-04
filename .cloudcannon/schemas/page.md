@@ -1,3 +1,3 @@
 ---
-title: Markdown page example
+title: 
 ---

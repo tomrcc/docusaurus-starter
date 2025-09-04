@@ -4,7 +4,7 @@ import MDXComponents from "@theme-original/MDXComponents";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import AlertButton from "@site/src/components/AlertButton";
-// import Highlight from "@site/src/components/Highlight";
+import Highlight from "@site/src/components/Highlight";
 
 export default {
   // Re-use the default mapping
@@ -12,4 +12,5 @@ export default {
   Tabs,
   TabItem,
   AlertButton,
+  Highlight,
 };
