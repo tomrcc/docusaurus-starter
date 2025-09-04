@@ -107,7 +107,7 @@ file_config:
     _inputs:
       $:
         type: array
-        label: Blog Tags
+        label: Sidebar Configuration
         options:
           structures: _structures.sidebar_items
 
