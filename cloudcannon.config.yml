@@ -87,6 +87,13 @@ file_config:
         label: Blog Authors
         options:
           structures: _structures.author
+  - glob: data/tags.yml
+    _inputs:
+      $:
+        type: array
+        label: Blog Tags
+        options:
+          structures: _structures.tag
 
 _inputs:
   slug:
@@ -100,6 +107,19 @@ _inputs:
     comment: Unlisted pages will be available in both development and production. They will be "hidden" in production, not indexed, excluded from sitemaps, and can only be accessed by users having a direct link.
 
 _structures:
+  tag:
+    values:
+      - value:
+          id:
+          label:
+          permalink:
+          description:
+        preview:
+          icon: tag
+          text:
+            - key: label
+          subtext:
+            - key: description
   author:
     values:
       - value:
