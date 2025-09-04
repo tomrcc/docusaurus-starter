@@ -7,7 +7,7 @@ export default function AlertButton({ children, alert_text, color }) {
         color: color,
         padding: "0.2rem",
       }}
-      onClick={() => alert({ alert_text })}>
+      onClick={() => alert(alert_text)}>
       {children}
     </button>
   );
