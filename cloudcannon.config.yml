@@ -167,7 +167,7 @@ _structures:
             type: object
             options:
               structures: _structures.sidebar_category_link
-              empty_type: object
+              empty_type: "null"
           type:
             hidden: true
           id: 
