@@ -92,3 +92,14 @@ _editables:
 _snippets_imports:
   mdx: true
   docusaurus_mdx: true  
+
+_snippets:
+  button:
+    template: mdx_paired_component
+    inline: true
+    preview:
+      text: Button
+    definitions:
+      component_name: button
+      content_key: inner_text
+      named_args: []

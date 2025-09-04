@@ -19,14 +19,9 @@
     },
     "items": [
       {
-        "label": "Congratulations",
+        "label": "Create a page",
         "type": "doc",
-        "id": "tutorial-basics/congratulations"
-      },
-      {
-        "label": "Create a blog post",
-        "type": "doc",
-        "id": "tutorial-basics/create-a-blog-post"
+        "id": "tutorial-basics/create-a-page"
       },
       {
         "label": "Create a document",
@@ -34,9 +29,14 @@
         "id": "tutorial-basics/create-a-document"
       },
       {
-        "label": "Create a page",
+        "label": "Create a blog post",
         "type": "doc",
-        "id": "tutorial-basics/create-a-page"
+        "id": "tutorial-basics/create-a-blog-post"
+      },
+      {
+        "label": "Markdown features",
+        "type": "doc",
+        "id": "tutorial-basics/markdown-features"
       },
       {
         "label": "Deploy your site",
@@ -44,9 +44,9 @@
         "id": "tutorial-basics/deploy-your-site"
       },
       {
-        "label": "Markdown features",
+        "label": "Congratulations",
         "type": "doc",
-        "id": "tutorial-basics/markdown-features"
+        "id": "tutorial-basics/congratulations"
       },
       {
         "type": "link",
