@@ -98,8 +98,12 @@ _snippets:
     template: mdx_paired_component
     inline: true
     preview:
-      text: Button
+      text: Alert Button
     definitions:
-      component_name: button
+      component_name: AlertButton
       content_key: inner_text
-      named_args: []
+      named_args:
+        - editor_key: alert_text
+          type: string
+        - editor_key: color
+          type: string
