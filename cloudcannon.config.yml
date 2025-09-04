@@ -124,6 +124,11 @@ _structures:
           page:
             type: switch
             comment: If set to true a page will be automatically generated for this author on this site.
+          socials:
+            type: object
+            options:
+              preview:
+                icon: communities
         preview:
           icon: article_person
           text:
