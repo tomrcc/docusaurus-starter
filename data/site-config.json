@@ -1,22 +1,25 @@
 {
-  "title": "My Site From a data file",
-  "tagline": "Dinosaurs are cool! Edited!",
+  "title": "CloudCannon Docusaurus Starter",
+  "tagline": "CloudCannon is a git-based CMS for SSGs like Docusaurus",
   "favicon": "img/favicon.ico",
   "url": "https://your-docusaurus-site.example.com",
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
   "blog": {
     "showReadingTime": true,
     "feedOptions": {
-      "type": ["rss", "atom"],
+      "type": [
+        "rss",
+        "atom"
+      ],
       "xslt": true
     },
     "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
   },
   "image": "img/docusaurus-social-card.jpg",
   "navbar": {
-    "title": "My Site",
+    "title": "CloudCannon",
     "logo": {
-      "alt": "My Site Logo",
+      "alt": "Logo",
       "src": "img/logo.svg"
     },
     "items": [
@@ -24,9 +27,13 @@
         "type": "docSidebar",
         "sidebarId": "tutorialSidebar",
         "position": "left",
-        "label": "Tutorial"
+        "label": "Docs"
       },
-      { "to": "/blog", "label": "Blog", "position": "left" },
+      {
+        "to": "/blog",
+        "label": "Blog",
+        "position": "left"
+      },
       {
         "href": "https://github.com/facebook/docusaurus",
         "label": "GitHub",
