@@ -19,7 +19,7 @@ collections_config:
     icon: text_ad
   blog:
     path: blog
-    url: "/blog/[full_slug]/"
+    url: "/blog/{slug}/"
     name: Blog
     glob: 
       - "**/*.md"
