@@ -27,7 +27,7 @@ collections_config:
     icon: event_available
     schemas:
       default:
-        path: .cloudcannon/schemas/blog.md
+        path: .cloudcannon/schemas/blog.mdx
     _inputs:
       authors:
         type: multiselect
@@ -52,7 +52,7 @@ collections_config:
     icon: docs
     schemas:
       default:
-        path: .cloudcannon/schemas/doc.md
+        path: .cloudcannon/schemas/doc.mdx
   data:
     path: data
     disable_url: true
