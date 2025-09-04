@@ -17,6 +17,9 @@ collections_config:
       - "**/*.md"
       - "**/*.mdx"
     icon: text_ad
+    schemas:
+      default:
+        path: .cloudcannon/schemas/page.md
   blog:
     path: blog
     url: "/blog/{slug}/"
