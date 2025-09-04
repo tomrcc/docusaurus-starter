@@ -79,6 +79,15 @@ data_config:
   tags:
     path: data/tags.yml
 
+file_config:
+  - glob: data/authors.yml
+    _inputs:
+      $:
+        type: array
+        label: Blog Authors
+        options:
+          structures: _structures.author
+
 _inputs:
   slug:
     type: text
@@ -89,6 +98,40 @@ _inputs:
   unlisted:
     type: switch
     comment: Unlisted pages will be available in both development and production. They will be "hidden" in production, not indexed, excluded from sitemaps, and can only be accessed by users having a direct link.
+
+_structures:
+  author:
+    values:
+      - value:
+          id: 
+          name: 
+          title: 
+          url: 
+          image_url: 
+          page: true
+          socials:
+            x: 
+            linkedin: 
+            github: 
+            newsletter:
+        _inputs:
+          id:
+            type: text
+            comment: A unique author id.
+          title:
+            type: text
+            comment: The job title of the author.
+          page:
+            type: switch
+            comment: If set to true a page will be automatically generated for this author on this site.
+        preview:
+          icon: article_person
+          text:
+            - key: name
+          subtext:
+            - key: title
+          image:
+            - key: image_url
 
 _editables:
   content:
