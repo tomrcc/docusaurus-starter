@@ -38,6 +38,10 @@ collections_config:
     create:
       path: '{date|year}-{date|month}-{date|day}/{slug|slugify}.mdx'
     _inputs:
+      date:
+        type: date
+        hidden: true
+        instance_value: NOW
       title:
         type: text
         comment: The blog post title.
