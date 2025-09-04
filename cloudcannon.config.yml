@@ -20,6 +20,10 @@ collections_config:
     schemas:
       default:
         path: .cloudcannon/schemas/page.md
+    _inputs:
+      title:
+        type: text
+        comment: The page title.
   blog:
     path: blog
     url: "/blog/{slug}/"
@@ -32,6 +36,9 @@ collections_config:
       default:
         path: .cloudcannon/schemas/blog.mdx
     _inputs:
+      title:
+        type: text
+        comment: The blog post title.
       authors:
         type: multiselect
         options:
@@ -56,6 +63,10 @@ collections_config:
     schemas:
       default:
         path: .cloudcannon/schemas/doc.mdx
+    _inputs:
+      title:
+        type: text
+        comment: The text title of your document. Used for the page metadata and as a fallback value in multiple places (sidebar, next/previous buttons...). Automatically added at the top of your doc if it does not contain any Markdown title.
   data:
     path: data
     disable_url: true
@@ -119,5 +130,16 @@ _snippets:
       named_args:
         - editor_key: alert_text
           type: string
+        - editor_key: color
+          type: string
+  highlight:
+    template: mdx_paired_component
+    inline: true
+    preview:
+      text: Highlighted Text
+    definitions:
+      component_name: Highlight
+      content_key: inner_text
+      named_args:
         - editor_key: color
           type: string
