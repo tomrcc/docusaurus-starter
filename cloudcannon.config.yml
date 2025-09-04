@@ -38,11 +38,12 @@ collections_config:
         path: .cloudcannon/schemas/blog.mdx
         create: 
           path: '{date|year}-{date|month}-{date|day}-{slug|slugify}.mdx'
+          _inputs:
+            date:
+              type: date
+              instance_value: NOW
+              comment: Used to order the blog posts.
     _inputs:
-      # date:
-      #   type: date
-      #   hidden: true
-      #   instance_value: NOW
       title:
         type: text
         comment: The blog post title.
