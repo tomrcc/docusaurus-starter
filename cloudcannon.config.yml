@@ -34,9 +34,10 @@ collections_config:
     icon: event_available
     schemas:
       default:
+        name: Blog Post
         path: .cloudcannon/schemas/blog.mdx
-    create:
-      path: '{date|year}-{date|month}-{date|day}/{slug|slugify}.mdx'
+        create: 
+          path: '{date|year}-{date|month}-{date|day}/{slug|slugify}.mdx'
     _inputs:
       date:
         type: date
