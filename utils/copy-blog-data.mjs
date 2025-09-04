@@ -14,8 +14,8 @@ const blogTagsDestPath = path.join("blog", "tags.yml");
 
   const blogAuthorData = {};
   blogAuthorDataRaw.map((author) => {
-    const authorKeyName = Object.keys(author);
-    blogAuthorData[authorKeyName] = author[authorKeyName];
+    const { id, ...rest } = author;
+    blogAuthorData[id] = { ...rest };
   });
 
   await fs.promises.writeFile(
@@ -28,8 +28,8 @@ const blogTagsDestPath = path.join("blog", "tags.yml");
 
   const blogTagsData = {};
   blogTagsDataRaw.map((tag) => {
-    const tagKeyName = Object.keys(tag);
-    blogTagsData[tagKeyName] = tag[tagKeyName];
+    const { id, ...rest } = tag;
+    blogTagsData[id] = { ...rest };
   });
 
   await fs.promises.writeFile(blogTagsDestPath, YAML.stringify(blogTagsData));
