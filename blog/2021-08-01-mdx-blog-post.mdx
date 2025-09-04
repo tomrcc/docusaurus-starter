@@ -1,10 +1,12 @@
 ---
+_schema: default
 slug: mdx-blog-post
 title: MDX Blog Post
-authors: [slorber]
-tags: [docusaurus]
+authors:
+  - slorber
+tags:
+  - docusaurus
 ---
-
 Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).
 
 :::tip
@@ -21,4 +23,9 @@ For example, use JSX to create an interactive button:
 <button onClick={() => alert('button clicked!')}>Click me!</button>
 ```
 
-<button onClick={() => alert('button clicked!')}>Click me!</button>
+&lt;button onClick={() => alert('button clicked!')}&gt;Click me!
+
+<Tabs groupId="a-test" queryString="testing" lazy={true}>
+  <TabItem label="Tab 1" value="Hello this is a tab" default={true}>Here is some text content in the content tabs</TabItem>
+  <TabItem label="Tab 2" value="Another tab test">A second piece of **text** to test</TabItem>
+</Tabs>
