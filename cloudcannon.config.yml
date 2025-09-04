@@ -35,6 +35,8 @@ collections_config:
     schemas:
       default:
         path: .cloudcannon/schemas/blog.mdx
+    create:
+      path: '{date|year}-{date|month}-{date|day}/{slug|slugify}.mdx'
     _inputs:
       title:
         type: text
@@ -94,6 +96,13 @@ file_config:
         label: Blog Tags
         options:
           structures: _structures.tag
+  - glob: data/sidebar.json
+    _inputs:
+      $:
+        type: array
+        label: Blog Tags
+        options:
+          structures: _structures.sidebar_items
 
 _inputs:
   slug:
@@ -107,6 +116,32 @@ _inputs:
     comment: Unlisted pages will be available in both development and production. They will be "hidden" in production, not indexed, excluded from sitemaps, and can only be accessed by users having a direct link.
 
 _structures:
+  sidebar_items:
+    values:
+      - label: Single Page
+        value:
+          type: doc
+          id: 
+          label:
+        _inputs:
+          id: 
+            type: url
+            comment: The page to use for the sidebar item.
+          label: 
+            type: text
+            comment: The text label for the page.
+      - label: Sidebar Category
+        value:
+          type: doc
+          id: 
+          label:
+        _inputs:
+          id: 
+            type: url
+            comment: The page to use for the sidebar item.
+          label: 
+            type: text
+            comment: The text label for the page.
   tag:
     values:
       - value:
