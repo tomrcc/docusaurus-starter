@@ -3,7 +3,7 @@ import React from "react";
 import MDXComponents from "@theme-original/MDXComponents";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import Button from "@site/src/components/Button";
+import AlertButton from "@site/src/components/AlertButton";
 // import Highlight from "@site/src/components/Highlight";
 
 export default {
@@ -11,4 +11,5 @@ export default {
   ...MDXComponents,
   Tabs,
   TabItem,
+  AlertButton,
 };
