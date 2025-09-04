@@ -32,6 +32,7 @@ collections_config:
       - "**/*.md"
       - "**/*.mdx"
     icon: event_available
+    disable_add_folder: true
     schemas:
       default:
         name: Blog Post
@@ -122,9 +123,25 @@ _inputs:
     comment: Unlisted pages will be available in both development and production. They will be "hidden" in production, not indexed, excluded from sitemaps, and can only be accessed by users having a direct link.
 
 _structures:
+  docs_page:
+    values:
+      - label: Single Page
+        icon: pages
+        value:
+          type: doc
+          id: 
+          label:
+        _inputs:
+          id: 
+            type: url
+            comment: The page to use for the sidebar item.
+          label: 
+            type: text
+            comment: The text label for the page.
   sidebar_items:
     values:
       - label: Single Page
+        icon: pages
         value:
           type: doc
           id: 
@@ -137,17 +154,41 @@ _structures:
             type: text
             comment: The text label for the page.
       - label: Sidebar Category
+        icon: category
         value:
-          type: doc
-          id: 
           label:
+          type: category
+          collapsible: true
+          collapsed: true
+          link: 
+          items: []
         _inputs:
+          link:
+            type: object
+            options:
+              structures: _structures.sidebar_category_link
+              empty_type: object
+          type:
+            hidden: true
           id: 
             type: url
             comment: The page to use for the sidebar item.
           label: 
             type: text
             comment: The text label for the page.
+          items:
+            type: array
+            options:
+              structures: _structures.docs_page
+  sidebar_category_link:
+    values:
+      - value:
+          type: generated-index
+          title:
+          description: 
+          slug: 
+          keywords: []
+          image: 
   tag:
     values:
       - value:
