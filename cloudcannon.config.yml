@@ -205,6 +205,7 @@ _structures:
   sidebar_category_link:
     values:
       - label: Existing Docs Page
+        icon: link
         value:
           type: doc 
           id: 
@@ -220,6 +221,7 @@ _structures:
         value:
           type: generated-index
           title:
+          slug:
           description: 
           keywords: []
           image: 
@@ -229,6 +231,9 @@ _structures:
           title:
             type: text
             comment: The title for the category index page.
+          slug:
+            type: text
+            comment: Allows you to customize the generated page's route, which defaults to /category/[categoryName].
           description:
             type: textarea
             comment: An optional description for the category index page.
