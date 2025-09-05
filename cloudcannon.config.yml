@@ -123,36 +123,52 @@ _inputs:
     comment: Unlisted pages will be available in both development and production. They will be "hidden" in production, not indexed, excluded from sitemaps, and can only be accessed by users having a direct link.
 
 _structures:
-  docs_page:
-    values:
-      - label: Single Page
-        icon: pages
-        value:
-          type: doc
-          id: 
-          label:
-        _inputs:
-          id: 
-            type: url
-            comment: The page to use for the sidebar item.
-          label: 
-            type: text
-            comment: The text label for the page.
   sidebar_items:
     values:
-      - label: Single Page
+      - label: Link
+        icon: link
+        value:
+          type: link
+          href: 
+          label:
+        _inputs:
+          type:
+            hidden: true
+          href:
+            type: url
+            options:
+              required: true
+              disable_upload_file: true
+              disable_upload_file_in_file_browser: true
+              hide_link_to_file: true
+              hide_link_to_page: false
+              hide_link_to_email_address: false
+              hide_link_to_telephone: false
+          label: 
+            type: text
+            comment: The text label for the page.
+      - label: Docs Page
         icon: pages
         value:
           type: doc
           id: 
           label:
         _inputs:
+          type:
+            hidden: true
           id: 
-            type: url
+            type: select
             comment: The page to use for the sidebar item.
+            options:
+              values: collections.docs
           label: 
             type: text
             comment: The text label for the page.
+        preview:
+          text:
+            - key: label
+          subtext:
+            - key: id
       - label: Sidebar Category
         icon: category
         value:
@@ -163,32 +179,70 @@ _structures:
           link: 
           items: []
         _inputs:
+          collapsed:
+            type: switch 
+          collapsible:
+            type: switch
           link:
             type: object
+            comment: Used to determine which page to link to when the category label is selected. Can be a generated index page, or an existing docs page.
             options:
               structures: _structures.sidebar_category_link
               empty_type: "null"
           type:
             hidden: true
-          id: 
-            type: url
-            comment: The page to use for the sidebar item.
           label: 
             type: text
             comment: The text label for the page.
           items:
             type: array
             options:
-              structures: _structures.docs_page
+              structures: _structures.sidebar_items
+        preview:
+          text:
+            - key: label
+          subtext: Category
   sidebar_category_link:
     values:
-      - value:
+      - label: Existing Docs Page
+        value:
+          type: doc 
+          id: 
+        _inputs:
+          type:
+            hidden: true
+          id:
+            type: select
+            options:
+              values: collections.docs
+      - label: Generated Index Page
+        value:
           type: generated-index
           title:
           description: 
           slug: 
           keywords: []
           image: 
+        _inputs:
+          type:
+            hidden: true
+          title:
+            type: text
+            comment: The title for the category index page.
+          description:
+            type: textarea
+            comment: An optional description for the category index page.
+          slug:
+            type: text
+            comment: Allows you to customize the generated page's route, which defaults to /category/[categoryName].
+          keywords:
+            type: array
+            comment: Used for keywords in the page's metadata, which are used for SEO purposes.
+          keywords[*]:
+            type: text
+          image:
+            type: image
+            comment: Used for metadata image.
   tag:
     values:
       - value:
