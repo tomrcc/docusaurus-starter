@@ -1,7 +1,7 @@
 [
   {
     "type": "doc",
-    "id": "intro",
+    "id": "/docs/intro.mdx",
     "label": "Getting started"
   },
   {
@@ -14,44 +14,46 @@
       "title": "Docusaurus Guides",
       "description": "Learn about the most important Docusaurus concepts!",
       "slug": "/category/docusaurus-guides",
-      "keywords": ["guides"],
+      "keywords": [
+        "guides"
+      ],
       "image": "/img/docusaurus.png"
     },
     "items": [
       {
-        "label": "Create a page",
         "type": "doc",
-        "id": "tutorial-basics/create-a-page"
+        "id": "tutorial-basics/create-a-page",
+        "label": "Create a page"
       },
       {
-        "label": "Create a document",
         "type": "doc",
-        "id": "tutorial-basics/create-a-document"
+        "id": "tutorial-basics/create-a-document",
+        "label": "Create a document"
       },
       {
-        "label": "Create a blog post",
         "type": "doc",
-        "id": "tutorial-basics/create-a-blog-post"
+        "id": "tutorial-basics/create-a-blog-post",
+        "label": "Create a blog post"
       },
       {
-        "label": "Markdown features",
         "type": "doc",
-        "id": "tutorial-basics/markdown-features"
+        "id": "tutorial-basics/markdown-features",
+        "label": "Markdown features"
       },
       {
-        "label": "Deploy your site",
         "type": "doc",
-        "id": "tutorial-basics/deploy-your-site"
+        "id": "tutorial-basics/deploy-your-site",
+        "label": "Deploy your site"
       },
       {
-        "label": "Congratulations",
         "type": "doc",
-        "id": "tutorial-basics/congratulations"
+        "id": "tutorial-basics/congratulations",
+        "label": "Congratulations"
       },
       {
         "type": "link",
-        "label": "Facebook",
-        "href": "https://facebook.com"
+        "href": "https://facebook.com",
+        "label": "Facebook"
       }
     ]
   },
@@ -60,17 +62,19 @@
     "type": "category",
     "collapsible": true,
     "collapsed": true,
-    "link": {},
+    "link": {
+      "type": "doc"
+    },
     "items": [
       {
-        "label": "Manage docs versions",
         "type": "doc",
-        "id": "tutorial-extras/manage-docs-versions"
+        "id": "tutorial-extras/manage-docs-versions",
+        "label": "Manage docs versions"
       },
       {
-        "label": "Translate your site",
         "type": "doc",
-        "id": "tutorial-extras/translate-your-site"
+        "id": "tutorial-extras/translate-your-site",
+        "label": "Translate your site"
       }
     ]
   }
