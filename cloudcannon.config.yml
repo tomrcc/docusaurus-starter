@@ -216,11 +216,11 @@ _structures:
             options:
               values: collections.docs
       - label: Generated Index Page
+        icon: grid_view
         value:
           type: generated-index
           title:
           description: 
-          slug: 
           keywords: []
           image: 
         _inputs:
@@ -232,9 +232,6 @@ _structures:
           description:
             type: textarea
             comment: An optional description for the category index page.
-          slug:
-            type: text
-            comment: Allows you to customize the generated page's route, which defaults to /category/[categoryName].
           keywords:
             type: array
             comment: Used for keywords in the page's metadata, which are used for SEO purposes.

@@ -13,10 +13,7 @@
       "type": "generated-index",
       "title": "Docusaurus Guides",
       "description": "Learn about the most important Docusaurus concepts!",
-      "slug": "/category/docusaurus-guides",
-      "keywords": [
-        "guides"
-      ],
+      "keywords": ["guides"],
       "image": "/img/docusaurus.png"
     },
     "items": [
@@ -66,7 +63,6 @@
       "type": "generated-index",
       "title": "Tutorial - Extras",
       "description": "",
-      "slug": "",
       "keywords": [],
       "image": ""
     },
