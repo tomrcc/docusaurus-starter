@@ -13,38 +13,39 @@
       "type": "generated-index",
       "title": "Docusaurus Guides",
       "description": "Learn about the most important Docusaurus concepts!",
+      "slug": "/category/docusaurus-guides",
       "keywords": ["guides"],
       "image": "/img/docusaurus.png"
     },
     "items": [
       {
         "type": "doc",
-        "id": "tutorial-basics/create-a-page",
+        "id": "/docs/tutorial-basics/create-a-page.mdx",
         "label": "Create a page"
       },
       {
         "type": "doc",
-        "id": "tutorial-basics/create-a-document",
+        "id": "/docs/tutorial-basics/create-a-document.mdx",
         "label": "Create a document"
       },
       {
         "type": "doc",
-        "id": "tutorial-basics/create-a-blog-post",
+        "id": "/docs/tutorial-basics/create-a-blog-post.mdx",
         "label": "Create a blog post"
       },
       {
         "type": "doc",
-        "id": "tutorial-basics/markdown-features",
+        "id": "/docs/tutorial-basics/markdown-features.mdx",
         "label": "Markdown features"
       },
       {
         "type": "doc",
-        "id": "tutorial-basics/deploy-your-site",
+        "id": "/docs/tutorial-basics/deploy-your-site.mdx",
         "label": "Deploy your site"
       },
       {
         "type": "doc",
-        "id": "tutorial-basics/congratulations",
+        "id": "/docs/tutorial-basics/congratulations.mdx",
         "label": "Congratulations"
       },
       {
@@ -63,18 +64,19 @@
       "type": "generated-index",
       "title": "Tutorial - Extras",
       "description": "",
+      "slug": "",
       "keywords": [],
       "image": ""
     },
     "items": [
       {
         "type": "doc",
-        "id": "tutorial-extras/manage-docs-versions",
+        "id": "/docs/tutorial-extras/manage-docs-versions.mdx",
         "label": "Manage docs versions"
       },
       {
         "type": "doc",
-        "id": "tutorial-extras/translate-your-site",
+        "id": "/docs/tutorial-extras/translate-your-site.mdx",
         "label": "Translate your site"
       }
     ]
