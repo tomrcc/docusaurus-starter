@@ -63,7 +63,12 @@
     "collapsible": true,
     "collapsed": true,
     "link": {
-      "type": "doc"
+      "type": "generated-index",
+      "title": "Tutorial - Extras",
+      "description": null,
+      "slug": null,
+      "keywords": [],
+      "image": null
     },
     "items": [
       {
