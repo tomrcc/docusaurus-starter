@@ -1,4 +1,4 @@
-import sidebarData from "./data/sidebar.json";
+import sidebarData from "./data/docs-sidebar.json";
 // @ts-check
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)

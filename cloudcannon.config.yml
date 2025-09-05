@@ -84,26 +84,26 @@ collections_config:
 
 data_config:
   authors:
-    path: data/authors.yml
+    path: data/blog-authors.yml
   tags:
-    path: data/tags.yml
+    path: data/blog-tags.yml
 
 file_config:
-  - glob: data/authors.yml
+  - glob: data/blog-authors.yml
     _inputs:
       $:
         type: array
         label: Blog Authors
         options:
           structures: _structures.author
-  - glob: data/tags.yml
+  - glob: data/blog-tags.yml
     _inputs:
       $:
         type: array
         label: Blog Tags
         options:
           structures: _structures.tag
-  - glob: data/sidebar.json
+  - glob: data/docs-sidebar.json
     _inputs:
       $:
         type: array

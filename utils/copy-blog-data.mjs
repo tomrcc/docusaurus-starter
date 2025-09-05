@@ -2,11 +2,11 @@ import fs from "fs";
 import path from "path";
 import YAML from "yaml";
 
-const blogAuthorsDataPath = path.join("data", "authors.yml");
-const blogAuthorsDestPath = path.join("blog", "authors.yml");
+const blogAuthorsDataPath = path.join("data", "blog-authors.yml");
+const blogAuthorsDestPath = path.join("blog", "blog-authors.yml");
 
-const blogTagsDataPath = path.join("data", "tags.yml");
-const blogTagsDestPath = path.join("blog", "tags.yml");
+const blogTagsDataPath = path.join("data", "blog-tags.yml");
+const blogTagsDestPath = path.join("blog", "blog-tags.yml");
 
 (async () => {
   // Write author data to blog folder
