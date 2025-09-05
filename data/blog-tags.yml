@@ -1,19 +1,15 @@
-- id: facebook
-  label: Facebook
+- label: Facebook
   permalink: /facebook
   description: Facebook tag description
 
-- id: hello
-  label: Hello
+- label: Hello
   permalink: /hello
   description: Hello tag description
 
-- id: docusaurus
-  label: Docusaurus
+- label: Docusaurus
   permalink: /docusaurus
   description: Docusaurus tag description
 
-- id: hola
-  label: Hola
+- label: Hola
   permalink: /hola
   description: Hola tag description
