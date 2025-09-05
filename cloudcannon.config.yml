@@ -1,5 +1,11 @@
 timezone: Asia/Bangkok
 
+commit_templates:
+  - label: Default message
+    template_string: '[default_commit_message]'
+  - label: Custom message
+    template_string: '{message}'
+
 paths:
   static: static
   uploads: static/img
@@ -110,6 +116,65 @@ file_config:
         label: Sidebar Configuration
         options:
           structures: _structures.sidebar_items
+  - glob: data/site-config.json
+    _inputs:
+      favicon:
+        type: image
+      editUrl:
+        type: url
+        comment: Add your site's repo.
+      blog:
+        type: object
+        options:
+          preview:
+            icon: newspaper
+      showReadingTime:
+        type: switch
+        comment: Show reading time for blog articles.
+      feedOptions:
+        type: object
+        options:
+          preview:
+            icon: newspaper
+      feedOptions.type:
+        type: multiselect
+        comment: Type of feed to be generated.
+        options:
+          values: 
+            - rss
+            - atom
+      feedOptions.xlst:
+        type: switch
+        comment: Permits to style the blog XML feeds with XSLT so that browsers render them nicely.
+      navbar:
+        type: object
+        options:
+          preview:
+            icon: page_header
+      navbar.logo:
+        type: object
+        options:
+          preview:
+            icon: image
+      navbar.items:
+        type: array
+        options:
+          structures: _structures.navbar_item
+      footer:
+        type: object
+        options:
+          preview:
+            icon: page_footer
+      footer.style:
+        type: select
+        options:
+          values: 
+            - primary
+            - dark
+      footer.links:
+        type: array
+        options:
+          structures: _structures.footer_link_section
 
 _inputs:
   slug:
@@ -121,8 +186,134 @@ _inputs:
   unlisted:
     type: switch
     comment: Unlisted pages will be available in both development and production. They will be "hidden" in production, not indexed, excluded from sitemaps, and can only be accessed by users having a direct link.
+  src:
+    type: image
+  alt:
+    type: textarea
 
 _structures:
+  footer_link_section:
+    values:
+      - value:
+          title:
+          items:
+        icon: list
+        _inputs:
+          items:
+            options:
+              structures: _structures.footer_link_item
+  footer_link_item:
+    values:
+      - label: Internal link
+        icon: link
+        value:
+          label:
+          to:
+        _inputs:
+          to:
+            type: url
+            comment: Link to a page on the site.
+            options:
+              required: true
+              disable_upload_file: true
+              disable_direct_input: false
+              disable_upload_file_in_file_browser: true
+              hide_link_to_file: false
+              hide_link_to_page: false
+              hide_link_to_email_address: false
+              hide_link_to_telephone: false   
+      - label: External link
+        icon: link
+        value:
+          label:
+          href:
+        _inputs:
+          href:
+            type: url
+            comment: A full-page navigation, used for navigating outside of the website.
+            options:
+              required: true
+              disable_upload_file: true
+              disable_direct_input: false
+              disable_upload_file_in_file_browser: true
+              hide_link_to_file: false
+              hide_link_to_page: true
+              hide_link_to_email_address: false
+              hide_link_to_telephone: false
+  navbar_item:
+    values:
+      - label: Docs link
+        icon: link
+        value:
+          type: docSidebar
+          sidebarId: tutorialSidebar
+          position:
+          label:
+        _inputs:
+          type:
+            hidden: true
+          sidebarId:
+            hidden: true
+            comment: The ID of the sidebar that this item is linked to.
+          position:
+            type: select
+            comment: The side of the navbar this item should appear on.
+            options:
+              values: 
+                - left
+                - right
+      - label: Internal link
+        icon: link
+        value:
+          to:
+          position:
+          label:
+        _inputs:
+          to:
+            type: url
+            comment: Link to a page on the site.
+            options:
+              required: true
+              disable_upload_file: true
+              disable_direct_input: false
+              disable_upload_file_in_file_browser: true
+              hide_link_to_file: false
+              hide_link_to_page: false
+              hide_link_to_email_address: false
+              hide_link_to_telephone: false
+          position:
+            type: select
+            comment: The side of the navbar this item should appear on.
+            options:
+              values: 
+                - left
+                - right
+      - label: External link
+        icon: link
+        value:
+          href:
+          position:
+          label:
+        _inputs:
+          href:
+            type: url
+            comment: A full-page navigation, used for navigating outside of the website.
+            options:
+              required: true
+              disable_upload_file: true
+              disable_direct_input: false
+              disable_upload_file_in_file_browser: true
+              hide_link_to_file: false
+              hide_link_to_page: true
+              hide_link_to_email_address: false
+              hide_link_to_telephone: false
+          position:
+            type: select
+            comment: The side of the navbar this item should appear on.
+            options:
+              values: 
+                - left
+                - right
   sidebar_items:
     values:
       - label: Link

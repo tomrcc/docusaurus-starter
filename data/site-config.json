@@ -1,26 +1,23 @@
 {
   "title": "CloudCannon Docusaurus Starter",
   "tagline": "CloudCannon is a git-based CMS for SSGs like Docusaurus",
-  "favicon": "img/favicon.ico",
+  "favicon": "/img/favicon.ico",
   "url": "https://your-docusaurus-site.example.com",
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
   "blog": {
     "showReadingTime": true,
     "feedOptions": {
-      "type": [
-        "rss",
-        "atom"
-      ],
+      "type": ["rss", "atom"],
       "xslt": true
     },
     "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
   },
-  "image": "img/docusaurus-social-card.jpg",
+  "image": "/img/docusaurus-social-card.jpg",
   "navbar": {
     "title": "CloudCannon",
     "logo": {
       "alt": "Logo",
-      "src": "img/logo.svg"
+      "src": "/img/logo.svg"
     },
     "items": [
       {
